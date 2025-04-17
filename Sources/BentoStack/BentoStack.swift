@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 
-public struct BentoStack: Layout {
+public struct BStack: Layout {
     let horizontalSpacing: CGFloat
     let verticalSpacing: CGFloat
     
@@ -20,7 +20,7 @@ public struct BentoStack: Layout {
         self.verticalSpacing = verticalSpacing
     }
     
-    public func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout Cache) -> CGSize {
+    public func sizeThatFits(proposal: ProposedViewSize, subviews: some Subviews, cache: inout Cache) -> CGSize {
         guard proposal.width != 0 && proposal.height != 0 else { return .zero }
         
         let packer = BentoCalculator(
@@ -36,7 +36,7 @@ public struct BentoStack: Layout {
         return CGSize(width: maxX, height: maxY)
     }
     
-    public func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout Cache) {
+    public func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: some Subviews, cache: inout Cache) {
         guard proposal.width != 0 && proposal.height != 0 else { return }
         
         let packer = BentoCalculator(

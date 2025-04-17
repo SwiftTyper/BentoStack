@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                BentoStack(horizontalSpacing: 100, verticalSpacing: 30) {
+                BStack(horizontalSpacing: 20, verticalSpacing: 20) {
                     ForEach(0..<items.count, id: \.self) { index in
                         Rectangle()
                             .fill(Color.blue.opacity(0.8).gradient.secondary)
@@ -43,7 +43,6 @@ struct ContentView: View {
                         addItem()
                     }
                 }
-                
             }
         }
     }

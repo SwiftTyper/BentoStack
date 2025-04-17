@@ -20,7 +20,7 @@ internal struct BentoCalculator {
         self.verticalSpacing = verticalSpacing
     }
     
-    func packAll(_ subviews: LayoutSubviews, in size: CGSize) -> [CGRect] {
+    func packAll(_ subviews: some Subviews, in size: CGSize) -> [CGRect] {
         let rects = subviews.map { subview in
             let size = subview.sizeThatFits(.unspecified)
             return CGRect(
