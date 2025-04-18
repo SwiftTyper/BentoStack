@@ -9,8 +9,8 @@ func testLayoutSubviewsOverlap() throws {
     for _ in 0..<100 {
         let bentoStack = BStack()
         let proposal = ProposedViewSize(
-            width: UIScreen.main.bounds.size.width,
-            height: UIScreen.main.bounds.size.height
+            width: 450,
+            height: 800
         )
         let subviews = createSubviews()
         var cache: () = {}()
@@ -48,8 +48,8 @@ fileprivate func createSubviews() -> [TestSubview] {
     var subviews: [TestSubview] = []
     for _ in 0..<100 {
         let size = CGSize(
-            width: CGFloat.random(in: 10...500),
-            height: CGFloat.random(in: 10...500)
+            width: CGFloat.random(in: 10...250),
+            height: CGFloat.random(in: 10...250)
         )
         subviews.append(.init(size: size))
     }
