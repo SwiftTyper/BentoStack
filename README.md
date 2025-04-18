@@ -9,15 +9,7 @@ https://github.com/user-attachments/assets/1f41f9dc-9a01-41b3-9002-7a72b44c22fb
 
 ### Swift Package Manager
 
-Add the following to your `Package.swift` file:
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/SwiftTyper/BentoStack.git", .upToNextMajor(from: "1.0.0"))
-]
-```
-
-Or add it directly in Xcode:
+Add it directly in Xcode:
 
     1. Navigate to File > Swift Packages > Add Package Dependency.
 
